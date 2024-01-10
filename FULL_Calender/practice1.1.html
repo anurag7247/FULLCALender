@@ -1,0 +1,29 @@
+<script>
+    function  printTwoElements(arr,size)
+   { 
+    var i;
+        document.write("The repeating element is ");
+        debugger;
+            
+    for (i = 0; i < size; i++) 
+    {
+        var abs_value = Math.abs(arr[i]);
+        if (arr[abs_value - 1] > 0)
+            arr[abs_value - 1] = -arr[abs_value - 1];
+        else
+            document.write( abs_value);
+    }
+              
+    document.write("<br> and the missing element is ");
+    for (i = 0; i < size; i++) 
+    {
+        if (arr[i] > 0)
+            document.write (i + 1);
+    }
+}
+  
+/* Driver code */
+    arr = new Array ( 7, 3, 4, 5, 5, 6, 2 );
+    n = arr.length;
+    printTwoElements(arr, n);
+    </script>
